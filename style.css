@@ -1,0 +1,127 @@
+/*
+SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+main color #1971c2
+background color #a5d8ff
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  line-height: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo {
+  width: 50rem;
+  background-color: #d0ebff;
+  /* margin: 100px auto; */
+  border-radius: 13px;
+  padding: 1.6rem 0;
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+}
+
+.user-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.input-field {
+  display: block;
+  width: 50%;
+  height: 3.2rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  background-color: #1971c2;
+  color: #fff;
+  border-radius: 9px;
+  transition: all 0.3s;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--add {
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.btn:hover {
+  background-color: #1864ab;
+}
+
+.entries {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.6rem;
+
+  height: 35rem;
+  overflow-y: scroll;
+}
+
+.entries::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+}
+
+.list {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  width: 80%;
+}
+
+.del-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn--delete,
+.btn--edit {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.2rem;
+}
