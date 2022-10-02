@@ -57,6 +57,7 @@ body {
 .input-field {
   display: block;
   width: 50%;
+  padding: 1rem;
   height: 3.2rem;
 }
 
@@ -82,11 +83,9 @@ body {
 
 .entries {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.6rem;
-
   height: 35rem;
   overflow-y: scroll;
 }
@@ -124,4 +123,26 @@ body {
 .btn--edit {
   padding: 0.8rem 1.6rem;
   font-size: 1.2rem;
+}
+
+.input-field--error {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+
+}
+
+.slide-down {
+  animation: 0.5s slide-down ease-in forwards;
+}
+
+@keyframes slide-down {
+  0%{
+    transform:translateY(-40%);
+  }
+  99% {
+    transform:translateY(0);
+  }
+  100% {
+    transform:translateY(0);
+  }
 }

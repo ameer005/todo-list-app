@@ -5,15 +5,28 @@ const containerEntries = document.querySelector(".entries");
 const btnAdd = document.querySelector(".btn--add");
 
 let userInput = document.querySelector(".input-field");
+userInput.addEventListener('focus', () => {
+  if(userInput.classList.contains('input-field--error')) {
+    userInput.classList.remove('input-field--error');
+  }
+});
 
 // MAIN LOGIC
 
 // adding to do entry
 btnAdd.addEventListener("click", function () {
+
+  if (!userInput.value) {
+    userInput.classList.add("input-field--error");
+    userInput.placeholder = "Please enter a task";
+    return;
+  }
+
   const html = `
-  <div class="content">
+  <div class="content slide-down">
   <div class="list">${userInput.value}</div>
   <div class="del-edit">
+  
     <button class="btn btn--delete">delete</button>
     <button class="btn btn--edit">edit</button>
   </div>
